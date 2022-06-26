@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  max-width: 500px;
+  height: 100vh;
+}
+
+.toast-message {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #784159;
+  border-radius: 8px;
+  padding: 8px 35px;
+  display: none;
+}
+
+@keyframes toastAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(30px);
+  }
+}
+
+.show-toast {
+  display: block;
+  animation: toastAnimation 1s forwards, toastAnimation 1s 4s reverse;
+}
